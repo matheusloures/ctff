@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ClassesDayPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='grey'>
+    <ion-title>Escolha um horário</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div text-center class='bg_img' padding text-center></div>
+    <ion-list>
+        <ion-item class='list-menu' *ngFor='let data of date;index as i' >
+          <!-- <h2 text-wrap class='date_txt'><strong>{{data.horario|horasunix}} - 50 minutos</strong></h2>
+          <h3>{{data.val}} MOOVECOINS para entrar</h3>
+          <h4>Faltam {{data.max}} alunos para ficar cheio</h4> -->
+          <div (click)='confirmHorario(data.horario, data.max, data.val)'>
+              <ion-row>
+                  <ion-col align-self-center col-8>
+                      <strong>{{data.horario|horasunix}} - 50 minutos</strong>
+                      <h4 text-wrap>Restam {{data.max}} vagas</h4>
+                  </ion-col>
+                  <ion-col class='mc_column' text-center align-self-center col-4>
+                    <p class='moovecoins_txt' style='font-size:5vh'>{{data.val}}</p>
+                    <p class='moovecoins_abr' style='font-size:2vh'>MC</p>
+
+                  </ion-col>
+              </ion-row>
+          </div>
+
+        </ion-item>
+      </ion-list>
+      <ion-card text-wrap padding>
+        <p>* Os Moove Coins só serão debitados da sua conta 15 minutos antes de cada aula que você se inscreveu no valor referente à quantidade de alunos presentes.</p>
+        <p>* Em caso de não comparecimento, os Moove Coins referentes à aula serão debitados da sua conta 15 minutos antes da aula.</p>
+        <p>* Desmarcações serão aceitas até 15 minutos antes de cada aula através do site, no menu Minhas Aulas.</p>
+        <p>* O valor dos Moove Coins acima são especulativos. Você pode pagar mais ou menos dependendo da quantidade de pessoas presentes. Confira a Tabela de Moove Coins abaixo para saber mais.</p>
+      </ion-card>
+      <a ion-button full class='home_button' (click)='comoFuncionaMc()'>Tabela de Moove Coins</a>
+
+
+</ion-content>

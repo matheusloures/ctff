@@ -1,0 +1,103 @@
+<!--
+  Generated template for the ClassesMinhasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='grey'>
+    <ion-title>Minhas Aulas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+    <!-- <div text-center class='bg_img' padding text-center></div> -->
+    <ion-list *ngIf='isUser'>
+      <div  *ngFor='let data of my_classes;let i=index'>
+          <ion-item class='list-menu' (click)='cancelarHorario(data, i)'>
+              <h2 text-wrap class='date_txt'><strong>Dia {{data|timeunix}} às {{data|horasunix}}</strong></h2>
+              <h3>Clique para cancelar este horário.</h3>
+            </ion-item>
+      </div>
+    </ion-list>
+    <ion-list *ngIf='isAdmin'>
+      <ion-card *ngIf='registrados' color='green'>
+
+          <ion-card-content>
+              <ion-row>
+                  <ion-col align-self-center col-8>
+                      <strong>Horários Marcados</strong>
+                  </ion-col>
+                  <ion-col text-center align-self-center col-4>
+                    <p style='font-size:5vh'>{{registrados||"0"}}</p>
+
+                  </ion-col>
+                </ion-row>
+
+
+          </ion-card-content>
+        </ion-card>
+        <div *ngFor='let divider of dividers;let i=index'>
+          <ion-item-group class='list-menu'>
+            <!-- <div  *ngIf='data.horario===divider.details.horario'> -->
+                <div>
+
+                        <ion-item-divider color="grey">
+                            <ion-row>
+                                <ion-col align-self-center col-8>
+                                    <strong>Dia {{divider|timeunix}} - {{divider|horasunix}}</strong>
+                                </ion-col>
+                                <ion-col text-center align-self-center col-4>
+                                  <p style='font-size:2vh'>Check-in</p>
+
+                                </ion-col>
+                            </ion-row>
+
+                        </ion-item-divider>
+                </div>
+                <div *ngFor='let data of my_classes;let i=index'>
+                  <div *ngIf='data.horario==divider'>
+
+                            <ion-item>
+                                <!-- <h2 text-wrap class='date_txt'><strong>{{data.horario|horasunix}}</strong></h2> -->
+                                <h3>{{data.nome|slice}}</h3>
+                                <h4>{{data.email|slice}}</h4>
+                                <h4><a href='tel:{{data.telefone}}'>{{data.telefone|slice}}</a></h4>
+                            </ion-item>
+                        </div>
+
+                  </div>
+
+                    <!-- </div> -->
+
+                  </ion-item-group>
+              </div>
+            <!-- <div *ngFor='let divider of dividers;let i=index'>
+              <div *ngFor='let data of my_classes;let i=index'>
+              <ion-item-group class='list-menu'>
+                      <div  *ngIf='data.horario===divider.details.horario'>
+
+                        <ion-item-divider color="grey">Dia {{divider.details.horario|timeunix}}</ion-item-divider>
+                        <ion-item>
+                            <h2 text-wrap class='date_txt'><strong>{{data.horario|horasunix}}</strong></h2>
+                            <h3>{{data.nome|slice}}</h3>
+                            <h4>{{data.email|slice}}</h4>
+                            <h4><a href='tel:{{data.telefone}}'>{{data.telefone|slice}}</a></h4>
+                          </ion-item>
+                      </div>
+
+
+                    </ion-item-group>
+                  </div>
+                </div> -->
+      </ion-list>
+      <ion-item *ngIf='no_classes' class='list-menu' (click)='goToMarcacao()'>
+          <h2 text-wrap class='date_txt'><strong>Você não se inscreveu em nenhum horário</strong></h2>
+          <h3 text-wrap>Clique aqui para ver o calendário de aulas.</h3>
+      </ion-item>
+
+</ion-content>

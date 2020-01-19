@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-navbar [color]='navbarColor'>
+
+        <button class='menu_button_inner' icon-only ion-button menuToggle>
+            <ion-icon  ios="ios-menu" md="md-menu"></ion-icon>
+        </button>
+
+    <ion-title text-left>
+      <img class='logo_header' [src]='logo_header'>
+    </ion-title>
+
+
+  </ion-navbar>
+</ion-header>
+<ion-menu [content]="content">
+
+  <ion-content  class='bg_menu' padding  class='menu_color'>
+  <div class="splash-logo-menu">
+  </div>
+  <div text-center class='spinner'>
+
+    <ion-spinner *ngIf='!moovecoins&&logged'></ion-spinner>
+    <!-- <ion-spinner *ngIf='!moovecoins'></ion-spinner> -->
+  </div>
+
+    <ion-list>
+        <div padding>
+            <h2 *ngIf='moovecoins&&logged' class='moovecoins_txt'><strong>Você tem {{moovecoins}} Moove Coins</strong></h2>
+
+        </div>
+      <a *ngIf='!logged'>
+          <button class='list-menu' menuClose ion-item *ngFor="let p of pages" (tap)="openPage(p)">
+              {{p.title}}
+          </button>
+      </a>
+
+      <button class='list-menu' *ngIf='logged&&isUser' ion-item (tap)="goToEventos()">
+        Calendário de aulas
+      </button>
+      <button class='list-menu' *ngIf='logged' ion-item (tap)="goToMinhasAulas()">
+        Minhas aulas
+      </button>
+      <button class='list-menu' *ngIf='logged' ion-item (tap)="goToMooveCoinsTable()">
+        Tabela de Moove Coins
+      </button>
+      <div  *ngIf='logged&&isAdmin'>
+          <button class='list-menu' ion-item (tap)="goToCadastrados()">
+              Cadastrados
+            </button>
+          <button class='list-menu' ion-item (tap)="goToSemAulas()">
+              Leads
+          </button>
+      </div>
+
+      <button class='list-menu' *ngIf='logged' ion-item full (tap)="logout()">Sair</button>
+
+
+    </ion-list>
+    <ion-footer>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <!-- <img class='logo_social_3d_ig' src='../../assets/imgs/instagram.png'> -->
+    <!-- <p style='color:white;top:0; right:0;padding-left:15px; font-size: 2vh'>Desenvolvido por <a target='_blank' rel="noopener noreferrer" href='http://www.appsportclub.com'>appsportclub</a></p> -->
+
+      </ion-footer>
+  </ion-content>
+</ion-menu>
+<ion-content #content class='content-info' overflow-scroll="false">
+
+  <div class='flex-container' padding>
+      <div text-center class='bg_img' padding text-center></div>
+      <a class='home_text' text-center text-wrap><strong>Chegamos para te desafiar!</strong></a>
+      <a class='home_subtitle' text-center text-wrap>Aulas em time com metodologia própria de treinamento funcional</a>
+      <a class='home_button' *ngIf='!logged' text-wrap ion-button (click)='goToLogin()'>Fazer Login</a>
+      <a class='home_button' *ngIf='logged' text-wrap ion-button (click)='goToMinhasAulas()'>Minhas Aulas</a>
+      <a class='subtitle_text' text-center text-wrap><img class = 'mergulhar_logo'src='../../assets/imgs/mergulhar_logo.png'><br>Rua Henrique Gorceix 2060 - Caiçara / Belo Horizonte</a>
+  </div>
+
+</ion-content>
+<ion-footer no-shadow no-border>
+    <ion-toolbar position="bottom">
+        <ion-grid>
+            <ion-row>
+              <ion-col text-center align-self-center>
+                  <a href='tel:3199910-4417'><ion-icon  align-self-center class='logo_social_3d_wp' ios="logo-whatsapp" md="logo-whatsapp"></ion-icon>
+
+                  </a>
+              </ion-col>
+              <ion-col text-center align-self-center>
+                <a href='https://www.instagram.com/3dmoove'target="_blank" rel="noopener noreferrer" text-center align-self-center>
+
+                  <img class='logo_social_3d_ig' src='../../assets/imgs/instagram.png'>
+                </a>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+      <ion-row >
+
+      </ion-row>
+    </ion-toolbar>
+
+</ion-footer>

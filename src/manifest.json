@@ -1,0 +1,13 @@
+{
+  "name": "3DMoove",
+  "short_name": "3DMoove",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/imgs/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#0e3844",
+  "theme_color": "#666666"
+}

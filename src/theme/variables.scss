@@ -1,0 +1,83 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+$text-color:        #000;
+$background-color:  #fff;
+
+
+
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  grey: #666666,
+  greyish: #C4C3C3,
+  greydark: #040303,
+  blue: #0e3844,
+  bluish: #366572,
+  bluedark: #001318,
+  green: #a0be37,
+  greenish: #DEF9A4,
+  greendark: #80B014
+
+);
+$grey: #666666;
+$greyish: #C4C3C3;
+$greydark: #040303;
+$blue: #0e3844;
+$bluish: #366572;
+$bluedark: #001318;
+$green: #a0be37;
+$greenish: #DEF9A4;
+$greendark: #80B014;
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

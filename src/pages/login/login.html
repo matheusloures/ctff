@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar [color]='navbarColor'>
+
+      <ion-title padding text-left>
+       Login
+      </ion-title>
+
+
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+  <div class='flex-container' padding>
+      <div text-center class='bg_img' padding text-center></div>
+
+        <img class='logo_login' [src]='logo_header'>
+          <form [formGroup]='loginForm' class='form_style' novalidate>
+              <ion-list>
+                  <ion-row>
+
+
+                    <ion-item class='list-menu'>
+                      <ion-input placeholder='Email' name='email' formControlName="email" type="email" ></ion-input>
+                    </ion-item>
+
+                    <ion-item class='list-menu' text-wrap *ngIf="!loginForm.controls.email.valid&&loginForm.controls.email.touched">
+                      <p class='danger'>Insira um email válido</p>
+                    </ion-item>
+
+
+
+                    <ion-item class='list-menu'>
+                        <ion-input placeholder='Senha' class='form-control' name='password' formControlName="password" type="password" ></ion-input>
+                    </ion-item>
+
+                      <ion-item class='list-menu' text-wrap *ngIf="!loginForm.controls.password.valid&&loginForm.controls.password.touched">
+                        <p class='danger'>Insira uma senha válida</p>
+                      </ion-item>
+                    </ion-row>
+
+                <div class='login_button_div'>
+                  <button [disabled]="!isReadyToSave" ion-button class='cadastre_button login_button' block (tap)='doLogin()'>Entrar</button>
+                </div>
+                <div>
+                  <button ion-button class='cadastre_button signup_button' (tap)='goToSignup()' block>Registrar</button>
+                </div>
+
+              </ion-list>
+            </form>
+
+
+
+</div>
+
+
+
+</ion-content>

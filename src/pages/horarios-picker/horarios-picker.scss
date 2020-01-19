@@ -1,0 +1,28 @@
+page-horarios-picker {
+
+  body{
+    width: 100%;
+  }
+
+  .home_button{
+
+
+    color: white!important;
+    background-color: $green!important;
+    height: 7vh!important;
+    font-size: 2vh!important;
+  }
+  .home_button:hover{
+
+    color: $green!important;
+    background-color: white!important;
+
+  }
+  .home_button:active{
+
+    color: $grey!important;
+    background-color: white!important;
+
+  }
+
+}

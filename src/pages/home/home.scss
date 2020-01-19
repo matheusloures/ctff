@@ -1,0 +1,310 @@
+page-home {
+
+
+
+  .home_button{
+
+    width: 80vh;
+    color: white;
+    background-color: $green;
+    height: 10vh;
+    font-size: 2vh;
+  }
+  .home_button:hover{
+
+    color: $green!important;
+    background-color: white!important;
+
+  }
+  .home_button:active{
+
+    color: $grey!important;
+    background-color: white!important;
+
+  }
+
+  .moovecoins_txt{
+    color:white;
+  }
+
+  .spinner{
+    width: 100%;
+  }
+
+  .home_text{
+    color: white;
+    font-size: 10vh;
+    font-weight: 100;
+    padding-bottom: 8vh;
+    padding-top:10vh;
+  }
+  .home_subtitle{
+    color: white;
+    font-size: 6vh;
+    padding-bottom: 8vh;
+    padding-top:2vh;
+  }
+
+  .bg_img{
+    background-repeat: repeat-x;
+    background: url('../assets/other/bg.jpg') no-repeat transparent;
+    opacity: 0.3;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .list-menu{
+    background: transparent!important;
+    color: white;
+  }
+  .menu_color{
+    background-color: $bluish;
+  }
+  .splash-logo-menu {
+    padding-bottom: 25vh;
+    background: url('../assets/imgs/logo_header_white.png') no-repeat left;
+    background-size: 70%;
+    margin-left: 20px;
+    width: 100%;
+    height: 100px;
+
+  }
+
+
+
+  .menu_button_pos{
+    right: 0;
+
+  }
+  .menu_button_pos:hover{
+    color: $grey!important;
+    background-color: white!important;
+
+  }
+  .menu_button_pos:active{
+    color: white!important;
+    background-color: $grey!important;
+
+  }
+  .menu_button_nightmode{
+    background-color: white;
+    color: $grey;
+  }
+  .menu_button_daymode{
+    background-color: $grey;
+    color: white;
+  }
+
+  .content-info{
+    background-color: $blue;
+  }
+
+  .flex-container {
+    color: white;
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+
+    .flex-item:nth-child(1) {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+      }
+
+  .flex-item:nth-child(2) {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+      }
+
+  .flex-item:nth-child(3) {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+      }
+
+  .flex-item:nth-child(4) {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+      }
+
+
+
+    .mergulhar_logo{
+      width: 20%;
+    }
+
+    .logo_social_3d_wp{
+      color: $green;
+      font-size: 5vh;
+    }
+    .logo_social_3d_ig{
+      width: 5vh;
+
+    }
+
+    .subtitle_text{
+      color: #E5E5E5;
+      font-size: 5vh;
+      padding-top: 2vh;
+    }
+
+    @media (min-width: 300px) and (max-width: 380px) {
+      .flex-container{
+        padding: 0!important;
+      }
+      .home_button{
+        width: 50vh;
+        color: white;
+        background-color: $green;
+        height: 10vh;
+        font-size: 2vh;
+      }
+
+      .logo_social_3d_wp{
+        color: $green;
+        font-size: 3.5vh;
+      }
+      .logo_social_3d_ig{
+        width: 3.5vh;
+
+      }
+
+      .home_text{
+        color: white;
+        font-size: 6vh;
+        padding-top:5vh;
+      }
+      .home_subtitle{
+        color: white;
+        font-size: 3vh;
+        padding-top:2vh;
+      }
+      .mergulhar_logo{
+        width: 30%;
+      }
+      .subtitle_text{
+        color: $greyish;
+        font-size:3vh;
+        padding-bottom: 1vh;
+        margin-top: 1vh;
+      }
+    }
+
+
+    @media (min-width: 300px) and (max-width: 500px) {
+      .flex-container{
+        padding: 0!important;
+      }
+      .home_button{
+        width: 50vh;
+        color: white;
+        background-color: $green;
+        height: 10vh;
+        font-size: 2vh;
+      }
+
+      .home_text{
+        color: white;
+        font-size: 6vh;
+        padding-top:5vh;
+      }
+      .home_subtitle{
+        color: white;
+        font-size: 3vh;
+        padding-top:2vh;
+      }
+      .mergulhar_logo{
+        width: 30%;
+      }
+      .subtitle_text{
+        color: $greyish;
+        font-size:3vh;
+        padding-bottom: 1vh;
+        margin-top: 1vh;
+      }
+    }
+    @media (min-width: 501px) {
+      .flex-container{
+        padding: 0!important;
+      }
+      .home_button{
+        width: 50vh;
+        color: white;
+        background-color: $green;
+        height: 10vh;
+        font-size: 2vh;
+      }
+
+      .home_text{
+        color: white;
+        font-size: 6vh;
+        padding-top:5vh;
+      }
+      .home_subtitle{
+        color: white;
+        font-size: 3vh;
+        padding-top:2vh;
+      }
+      .mergulhar_logo{
+        width: 20%;
+      }
+      .subtitle_text{
+        color: $greyish;
+        font-size:3vh;
+        padding-bottom: 1vh;
+        margin-top: 1vh;
+      }
+    }
+}
+
+

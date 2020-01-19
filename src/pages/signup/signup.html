@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-navbar [color]='navbarColor'>
+
+
+      <ion-title padding text-left>
+        Cadastrar
+      </ion-title>
+
+
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+  <div class='flex-container' padding>
+      <div text-center class='bg_img' padding text-center></div>
+
+        <img class='logo_login' [src]='logo_header'>
+        <form [formGroup]='signupForm' class='form_style' novalidate>
+            <ion-list>
+
+              <ion-row>
+                  <ion-item class='list-menu'>
+                      <ion-input placeholder='Seu nome'  class='form-control' name='username' maxlength='60' formControlName="username" type="text" ></ion-input>
+                  </ion-item>
+
+                  <ion-item class='list-menu' text-wrap *ngIf="!signupForm.controls.username.valid&&signupForm.controls.username.untouched">
+                    <p class='d3green'>Insira seu nome</p>
+                  </ion-item>
+
+                  <ion-item class='list-menu'>
+                    <ion-input placeholder='Email' class='form-control' name='email' formControlName="email" type="email" ></ion-input>
+                  </ion-item>
+
+                  <ion-item class='list-menu' text-wrap *ngIf="!signupForm.controls.email.valid&&signupForm.controls.email.untouched">
+                    <p class='d3green'>Insira um email válido</p>
+                  </ion-item>
+
+
+                  <ion-item class='list-menu'>
+                    <ion-input placeholder='Telefone' name='telefone' class='form-control' name='telefone' formControlName="telefone" type="phone" ></ion-input>
+                  </ion-item>
+
+                  <ion-item class='list-menu' text-wrap *ngIf="!signupForm.controls.telefone.valid&&signupForm.controls.telefone.untouched">
+                    <p class='d3green'>Insira um telefone para contato. Ex.: 31987654321 ou 987654321</p>
+                  </ion-item>
+
+                  <ion-item class='list-menu'>
+                      <ion-input placeholder='Senha' class='form-control' name='password' formControlName="password" type="password" ></ion-input>
+                  </ion-item>
+
+                    <ion-item class='list-menu' text-wrap *ngIf="!signupForm.controls.password.valid&&signupForm.controls.password.untouched">
+                      <p class='d3green'>Insira uma senha válida de no mínimo 1 número com 8 caracteres</p>
+                    </ion-item>
+              </ion-row>
+
+
+
+
+
+              <div>
+                <!-- <button [disabled]="!isReadyToSave"  ion-button class='cadastre_button signup_button' block>Cadastrar</button> -->
+                <button [disabled]="!isReadyToSave" (tap)='doSignUp()' ion-button class='cadastre_button signup_button' block>Cadastrar</button>
+              </div>
+
+            </ion-list>
+          </form>
+
+    </div>
+
+
+
+
+
+</ion-content>
